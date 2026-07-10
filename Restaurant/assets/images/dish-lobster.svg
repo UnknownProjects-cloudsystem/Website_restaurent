@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-label="Butter-poached lobster tail, plated">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="80%">
+      <stop offset="0%" stop-color="#2a1d12"/><stop offset="55%" stop-color="#160f0a"/><stop offset="100%" stop-color="#0a0806"/>
+    </radialGradient>
+    <radialGradient id="plate" cx="44%" cy="36%" r="70%">
+      <stop offset="0%" stop-color="#3a2f24"/><stop offset="55%" stop-color="#241a11"/><stop offset="88%" stop-color="#14100b"/><stop offset="100%" stop-color="#2a2016"/>
+    </radialGradient>
+    <radialGradient id="platespec" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff1d0" stop-opacity="0.5"/><stop offset="100%" stop-color="#fff1d0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f06a36"/><stop offset="45%" stop-color="#d6431f"/><stop offset="100%" stop-color="#8f2414"/>
+    </linearGradient>
+    <linearGradient id="shellpink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9a6e"/><stop offset="100%" stop-color="#e25a2c"/>
+    </linearGradient>
+    <linearGradient id="meat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff3e6"/><stop offset="55%" stop-color="#ffe0cf"/><stop offset="100%" stop-color="#f3b89a"/>
+    </linearGradient>
+    <linearGradient id="lemon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff0a8"/><stop offset="100%" stop-color="#e9c64a"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="soft2" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="480" height="600" fill="url(#bg)"/>
+
+  <!-- plate -->
+  <ellipse cx="240" cy="318" rx="196" ry="158" fill="#0c0805"/>
+  <ellipse cx="240" cy="310" rx="186" ry="150" fill="url(#plate)"/>
+  <ellipse cx="186" cy="248" rx="120" ry="64" fill="url(#platespec)" filter="url(#soft)" opacity="0.5"/>
+  <ellipse cx="240" cy="310" rx="186" ry="150" fill="none" stroke="#C9A24B" stroke-width="1.6" stroke-opacity="0.45"/>
+  <ellipse cx="240" cy="310" rx="150" ry="118" fill="none" stroke="#000" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- contact shadow -->
+  <ellipse cx="248" cy="386" rx="130" ry="52" fill="#000" opacity="0.5" filter="url(#soft)"/>
+
+  <!-- drawn butter pool -->
+  <g><ellipse cx="240" cy="372" rx="118" ry="40" fill="#caa24a" opacity="0.20"/><ellipse cx="200" cy="362" rx="30" ry="9" fill="#ffe9a8" opacity="0.35" filter="url(#soft2)"/></g>
+
+  <!-- lobster tail: shell + fan -->
+  <g transform="translate(0,4)">
+    <!-- tail fan flukes at bottom -->
+    <g fill="url(#shell)" stroke="#7a1d10" stroke-width="2">
+      <path d="M240 392 C214 396 196 416 196 444 C214 450 230 446 240 430 Z"/>
+      <path d="M240 392 C266 396 284 416 284 444 C266 450 250 446 240 430 Z"/>
+      <path d="M240 396 C228 402 222 420 224 446 C236 450 244 446 248 446 C250 420 250 402 240 396 Z"/>
+    </g>
+    <!-- shell body (curved) -->
+    <path d="M168 196 C150 250 156 318 206 372 L274 372 C324 318 330 250 312 196 C300 160 270 140 240 140 C210 140 180 160 168 196 Z" fill="url(#shell)"/>
+    <!-- shell ridge highlight -->
+    <path d="M176 200 C160 250 168 312 210 360" fill="none" stroke="#ffb38a" stroke-width="4" stroke-opacity="0.5" stroke-linecap="round"/>
+    <path d="M304 200 C320 250 312 312 270 360" fill="none" stroke="#7a1d10" stroke-width="5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <!-- shell speckles -->
+    <g fill="#7a1d10" opacity="0.45"><circle cx="196" cy="230" r="3"/><circle cx="288" cy="236" r="3"/><circle cx="204" cy="300" r="2.6"/><circle cx="280" cy="306" r="2.6"/><circle cx="240" cy="170" r="3"/></g>
+
+    <!-- exposed meat down the middle -->
+    <path d="M210 168 C196 220 200 300 232 356 C236 360 244 360 248 356 C280 300 284 220 270 168 C262 150 248 144 240 144 C232 144 218 150 210 168 Z" fill="url(#meat)" stroke="#e88a5e" stroke-width="2"/>
+    <!-- meat segment striations -->
+    <g stroke="#eaa885" stroke-width="2.4" stroke-opacity="0.55" fill="none" stroke-linecap="round">
+      <path d="M214 196 C232 204 250 204 266 196"/><path d="M212 232 C232 242 250 242 268 232"/>
+      <path d="M214 270 C232 280 250 280 266 270"/><path d="M220 308 C234 316 248 316 260 308"/>
+    </g>
+    <!-- buttery char spots on meat -->
+    <g fill="#c47a3e" opacity="0.5"><ellipse cx="228" cy="214" rx="7" ry="4"/><ellipse cx="256" cy="252" rx="6" ry="3.5"/><ellipse cx="232" cy="292" rx="6" ry="3.5"/></g>
+    <!-- glossy butter glaze highlights -->
+    <g fill="#fff7e6" opacity="0.7"><ellipse cx="232" cy="184" rx="10" ry="5" filter="url(#soft2)"/><ellipse cx="252" cy="240" rx="7" ry="3.5" filter="url(#soft2)"/><ellipse cx="234" cy="300" rx="7" ry="3.5" filter="url(#soft2)"/></g>
+  </g>
+
+  <!-- caviar pearls garnish on top -->
+  <g fill="#1f2026" stroke="#5a5e6b" stroke-width="0.5">
+    <circle cx="240" cy="150" r="3.4"/><circle cx="233" cy="156" r="3"/><circle cx="247" cy="156" r="3"/><circle cx="240" cy="162" r="3"/>
+  </g>
+
+  <!-- lemon wedge -->
+  <g transform="rotate(18 330 318)">
+    <path d="M330 286 a34 34 0 0 1 0 64 Z" fill="url(#lemon)" stroke="#caa42e" stroke-width="1.5"/>
+    <path d="M330 292 a28 28 0 0 1 0 52 Z" fill="#fff6c8" opacity="0.5"/>
+    <g stroke="#e3c45a" stroke-width="1"><line x1="330" y1="300" x2="348" y2="308"/><line x1="330" y1="318" x2="352" y2="318"/><line x1="330" y1="336" x2="348" y2="328"/></g>
+  </g>
+
+  <!-- microgreens -->
+  <g stroke="#7e9a52" stroke-width="2.4" stroke-linecap="round" fill="none">
+    <path d="M150 330 q12 -12 28 -12 M156 338 q14 -8 30 -10"/>
+  </g>
+  <g fill="#8fae5c"><circle cx="178" cy="318" r="3"/><circle cx="186" cy="328" r="2.6"/></g>
+
+  <!-- steam -->
+  <g stroke="#fff" stroke-opacity="0.10" stroke-width="9" fill="none" stroke-linecap="round" filter="url(#soft)">
+    <path d="M224 150 C212 116 238 98 226 66"/><path d="M270 168 C282 136 260 116 274 84"/>
+  </g>
+
+  <radialGradient id="vig" cx="50%" cy="46%" r="62%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+  <rect width="480" height="600" fill="url(#vig)"/>
+</svg>

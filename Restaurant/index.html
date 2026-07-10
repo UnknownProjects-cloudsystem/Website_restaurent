@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison Lumière — Where Fire Meets Refinement</title>
+  <meta name="description" content="A two-Michelin-star dining experience. Prime steaks, cold-water lobster, caviar, and a seasonal tasting menu. Order online for pickup or delivery." />
+  <meta property="og:title" content="Maison Lumière" />
+  <meta property="og:description" content="Where fire meets refinement. Order online or reserve an evening." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0C0A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23C9A24B' text-anchor='middle'%3EML%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/order.css" />
+
+  <!-- Optional: use a web cooking video as the hero background.
+       Paste a YouTube video ID below to enable it (the legitimate way to
+       use a web video as a hero). Leave blank for the local mp4 + 3D look. -->
+  <script>window.HERO_VIDEO = { youtubeId: "" };</script>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <a class="brand" href="index.html">Maison <span>Lumière</span></a>
+    <div class="nav-right">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" data-page="index.html">Home</a>
+        <a href="menu.html" data-page="menu.html">Menu</a>
+        <a href="#reserve" data-resv-open>Reservations</a>
+        <a class="btn-reserve magnetic" href="menu.html">Order Online</a>
+      </nav>
+      <button class="cart-btn" data-drawer-open aria-label="Open your order">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" aria-hidden="true">0</span>
+      </button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div id="hero-yt" aria-hidden="true"></div>
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-poster.svg"><source src="assets/video/hero-cooking.mp4" type="video/mp4" /></video>
+    <div id="three-hero" aria-hidden="true"></div>
+    <canvas class="ember-canvas" data-fx="ember" aria-hidden="true"></canvas>
+    <div class="candle-glow" aria-hidden="true"></div>
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-star">★ &nbsp;<b>Two Michelin Stars</b>&nbsp; · &nbsp; Guide Selection</p>
+      <h1 class="hero-title display-xl" data-split>Maison Lumière</h1>
+      <p class="hero-tag">Where fire meets refinement.</p>
+      <div class="hero-cta">
+        <a class="btn-solid magnetic" href="menu.html">Order Online</a>
+        <a class="btn-reserve magnetic" href="#reserve" data-resv-open>Reserve a Table</a>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><i></i></div>
+  </section>
+
+  <!-- ===================== PHILOSOPHY ===================== -->
+  <section class="section">
+    <div class="wrap philosophy">
+      <div class="reveal">
+        <p class="eyebrow">The Craft</p>
+        <p class="pull-quote">Forty days aged. Forty seconds seared. <em>One unforgettable bite.</em></p>
+        <div class="rule wide"></div>
+        <p class="lead reveal" data-delay="1">Every plate begins at the flame and ends in stillness. We cook with patience, source without compromise, and serve only what we would set before someone we love.</p>
+      </div>
+      <figure class="philosophy-figure reveal" data-delay="2" aria-label="The open fire of the kitchen">
+        <div class="ph-fill" style="background-image:url('assets/images/craft-fire.svg');background-size:cover;background-position:center;"></div>
+        <canvas class="ph-flame" data-fx="flame" aria-hidden="true"></canvas>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== CUISINE MARQUEE ===================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Caviar <b>✦</b></span><span>Dry-Aged Beef <b>✦</b></span><span>Cold-Water Lobster <b>✦</b></span><span>Black Truffle <b>✦</b></span><span>A5 Wagyu <b>✦</b></span><span>Champagne <b>✦</b></span>
+      <span>Caviar <b>✦</b></span><span>Dry-Aged Beef <b>✦</b></span><span>Cold-Water Lobster <b>✦</b></span><span>Black Truffle <b>✦</b></span><span>A5 Wagyu <b>✦</b></span><span>Champagne <b>✦</b></span>
+    </div>
+  </div>
+
+  <!-- ===================== SIGNATURE DISHES (orderable) ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="dishes-head reveal">
+        <div><p class="eyebrow">Signature Plates</p><h2 class="display-l gold-shimmer">From the pass</h2></div>
+        <a class="btn-reserve magnetic" href="menu.html">Full menu &amp; ordering</a>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish reveal" data-delay="1">
+          <div class="dish-media"><div class="fill" style="background-image:url('assets/images/ribeye.jpg');"></div><div class="glow"></div></div>
+          <div class="dish-body">
+            <h3>Dry-Aged Ribeye</h3>
+            <p>Forty-day aged prime beef, bone marrow butter, charred shallot, sauce bordelaise.</p>
+            <div class="dish-row"><span class="price">$68</span><button class="add-btn" data-add="rib"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg> Add</button></div>
+          </div>
+        </article>
+        <article class="dish reveal" data-delay="2">
+          <div class="dish-media"><div class="fill" style="background-image:url('assets/images/lobster.jpg');"></div><div class="glow"></div></div>
+          <div class="dish-body">
+            <h3>Butter-Poached Lobster</h3>
+            <p>Cold-water lobster, vanilla beurre blanc, leek ash, caviar pearl.</p>
+            <div class="dish-row"><span class="price">$74</span><button class="add-btn" data-add="lob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg> Add</button></div>
+          </div>
+        </article>
+        <article class="dish reveal" data-delay="3">
+          <div class="dish-media"><div class="fill" style="background-image:url('assets/images/caviar.jpg');"></div><div class="glow"></div></div>
+          <div class="dish-body">
+            <h3>Oscietra Caviar Service</h3>
+            <p>Thirty grams, warm blinis, crème fraîche, chive, mother-of-pearl.</p>
+            <div class="dish-row"><span class="price">$120</span><button class="add-btn" data-add="osc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg> Add</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AMBIENCE VIDEO BAND ===================== -->
+  <section class="ambience">
+    <video class="ambience-video" autoplay muted loop playsinline poster="assets/images/room.svg"><source src="assets/video/ambience.mp4" type="video/mp4" /></video>
+    <div class="ph-fill" aria-hidden="true"></div>
+    <div class="ambience-veil" aria-hidden="true"></div>
+    <div class="ambience-content reveal">
+      <p class="eyebrow">The Room</p>
+      <h2 class="display-l">An evening, slowed down.</h2>
+      <div class="rule"></div>
+      <p class="lead">Candlelight, low conversation, and the quiet choreography of a kitchen at full grace. Twelve tables. One seating. Yours.</p>
+    </div>
+  </section>
+
+  <!-- ===================== ACCOLADES ===================== -->
+  <section class="section">
+    <div class="wrap accolades reveal">
+      <div class="accolade"><div class="star">★ ★</div><small>Michelin Guide</small></div>
+      <div class="accolade"><div class="star">98</div><small>Wine Spectator</small></div>
+      <div class="accolade"><div class="star">5</div><small>Forbes Travel</small></div>
+      <div class="accolade"><div class="star">№ 14</div><small>World's 50 Best</small></div>
+    </div>
+  </section>
+
+  <!-- ===================== RESERVE ===================== -->
+  <section class="section reserve" id="reserve">
+    <div class="wrap reveal">
+      <p class="eyebrow">Reservations &amp; Ordering</p>
+      <h2 class="display-l">Join us — or take it home.</h2>
+      <div class="rule"></div>
+      <p class="lead" style="max-width:48ch;margin-inline:auto;">Dine in Wednesday through Sunday from six o'clock, or order online for pickup and delivery across the city.</p>
+      <div class="hero-cta" style="opacity:1;animation:none;margin-top:2.5rem;">
+        <a class="btn-solid magnetic" href="menu.html">Start an Order</a>
+        <a class="btn-reserve magnetic" href="tel:+10000000000" data-resv-open>Reserve a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="foot-grid">
+      <div><p class="foot-brand">Maison <span>Lumière</span></p><p class="muted" style="margin-top:1rem;">Where fire meets refinement.</p></div>
+      <div><h4>Visit</h4><p>14 Rue de la Flamme<br/>Old Town</p></div>
+      <div><h4>Hours</h4><p>Wed – Sun<br/>6:00 PM – Late</p></div>
+      <div><h4>Order &amp; Connect</h4><p><a href="menu.html">Order Online</a><br/><a href="#">Instagram</a><br/><a href="#">Private Dining</a></p></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Maison Lumière. All rights reserved.</span><span>Crafted with fire.</span></div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/three-scene.js"></script>
+  <script src="assets/js/background-fx.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

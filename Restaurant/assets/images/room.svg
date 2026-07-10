@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="The dining room at night">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a130d"/><stop offset="60%" stop-color="#120d09"/><stop offset="100%" stop-color="#0a0806"/>
+    </linearGradient>
+    <radialGradient id="cg"><stop offset="0%" stop-color="#ffcf8a" stop-opacity="0.9"/><stop offset="100%" stop-color="#ffcf8a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="arch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2a1a" stop-opacity="0.5"/><stop offset="100%" stop-color="#1a130d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- suggested arches -->
+  <g fill="url(#arch)">
+    <path d="M120 520 a160 200 0 0 1 320 0 L440 900 L120 900 Z"/>
+    <path d="M640 520 a160 200 0 0 1 320 0 L960 900 L640 900 Z"/>
+    <path d="M1160 520 a160 200 0 0 1 320 0 L1480 900 L1160 900 Z"/>
+  </g>
+
+  <!-- candle glows along a table line -->
+  <g>
+    <circle cx="280" cy="560" r="80" fill="url(#cg)"/>
+    <circle cx="560" cy="600" r="70" fill="url(#cg)"/>
+    <circle cx="820" cy="560" r="90" fill="url(#cg)"/>
+    <circle cx="1080" cy="600" r="70" fill="url(#cg)"/>
+    <circle cx="1340" cy="560" r="80" fill="url(#cg)"/>
+  </g>
+  <!-- candle flames -->
+  <g fill="#ffdf9e">
+    <ellipse cx="280" cy="556" rx="5" ry="13"/><ellipse cx="560" cy="596" rx="4.5" ry="12"/>
+    <ellipse cx="820" cy="556" rx="5.5" ry="14"/><ellipse cx="1080" cy="596" rx="4.5" ry="12"/><ellipse cx="1340" cy="556" rx="5" ry="13"/>
+  </g>
+  <!-- table reflection band -->
+  <rect x="0" y="640" width="1600" height="120" fill="#E0A458" opacity="0.05"/>
+</svg>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order — Le Menu · Maison Lumière</title>
+  <meta name="description" content="Order online from Maison Lumière: caviar, lobster, dry-aged steaks, and a seven-course tasting. Pickup or delivery." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0C0A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23C9A24B' text-anchor='middle'%3EML%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/order.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav scrolled">
+    <a class="brand" href="index.html">Maison <span>Lumière</span></a>
+    <div class="nav-right">
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" data-page="index.html">Home</a>
+        <a href="menu.html" data-page="menu.html">Menu</a>
+        <a href="index.html#reserve" data-resv-open>Reservations</a>
+        <a class="btn-reserve magnetic" data-drawer-open href="javascript:void(0)">View Order</a>
+      </nav>
+      <button class="cart-btn" data-drawer-open aria-label="Open your order">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" aria-hidden="true">0</span>
+      </button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== MENU HERO ===================== -->
+  <section class="menu-hero">
+    <canvas class="ember-canvas" data-fx="ember" aria-hidden="true"></canvas>
+    <div class="candle-glow" aria-hidden="true"></div>
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-star">★ ★ &nbsp; Autumn Selection</p>
+      <h1 class="display-xl" style="font-size:clamp(2.6rem,8vw,6rem);">Le Menu</h1>
+      <p class="hero-tag">Tap to add. Pickup or delivery.</p>
+    </div>
+  </section>
+
+  <!-- ===================== COURSE NAV (rendered) ===================== -->
+  <nav class="course-nav" id="course-nav" aria-label="Menu sections"></nav>
+
+  <section class="section">
+    <!-- TASTING FEATURE (orderable) -->
+    <div class="tasting reveal" id="tasting">
+      <p class="eyebrow">The Chef's Tasting</p>
+      <h2>Seven Movements</h2>
+      <p class="lead">An evening composed by the kitchen — the finest of the season, course by course.</p>
+      <ol>
+        <li>Caviar &amp; warm blini</li>
+        <li>Foie gras, fig, brioche</li>
+        <li>Truffle velouté</li>
+        <li>Butter-poached lobster</li>
+        <li>Dry-aged ribeye, bordelaise</li>
+        <li>Cheese, honeycomb, walnut</li>
+        <li>Dark chocolate soufflé</li>
+      </ol>
+      <p class="price-big">$195 <span class="muted" style="font-size:1rem;">per guest</span></p>
+      <div class="tasting-actions">
+        <button class="add-btn" data-add="tasting"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg> Add Tasting</button>
+        <button class="add-btn" data-add="pairing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg> Add Wine Pairing · $125</button>
+      </div>
+    </div>
+
+    <!-- MENU SECTIONS (rendered from menu-data.js) -->
+    <div id="menu-root"></div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section reserve">
+    <div class="wrap reveal">
+      <p class="eyebrow">Ready When You Are</p>
+      <h2 class="display-l">Review your order.</h2>
+      <div class="rule"></div>
+      <div style="margin-top:2rem;"><button class="btn-solid magnetic" data-drawer-open>Open Your Order →</button></div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="foot-grid">
+      <div><p class="foot-brand">Maison <span>Lumière</span></p><p class="muted" style="margin-top:1rem;">Where fire meets refinement.</p></div>
+      <div><h4>Visit</h4><p>14 Rue de la Flamme<br/>Old Town</p></div>
+      <div><h4>Hours</h4><p>Wed – Sun<br/>6:00 PM – Late</p></div>
+      <div><h4>Order &amp; Connect</h4><p><a href="index.html">Home</a><br/><a href="#">Instagram</a><br/><a href="#">Private Dining</a></p></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Maison Lumière. All rights reserved.</span><span>Crafted with fire.</span></div>
+  </footer>
+
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/background-fx.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
