@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-label="Dry-aged ribeye, plated">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="80%">
+      <stop offset="0%" stop-color="#2a1d12"/><stop offset="55%" stop-color="#160f0a"/><stop offset="100%" stop-color="#0a0806"/>
+    </radialGradient>
+    <radialGradient id="plate" cx="44%" cy="36%" r="70%">
+      <stop offset="0%" stop-color="#3a2f24"/><stop offset="55%" stop-color="#241a11"/><stop offset="88%" stop-color="#14100b"/><stop offset="100%" stop-color="#2a2016"/>
+    </radialGradient>
+    <radialGradient id="platespec" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff1d0" stop-opacity="0.5"/><stop offset="100%" stop-color="#fff1d0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="crust" cx="42%" cy="34%" r="78%">
+      <stop offset="0%" stop-color="#9c5a30"/><stop offset="38%" stop-color="#6e3a1d"/><stop offset="72%" stop-color="#4a2410"/><stop offset="100%" stop-color="#2c1408"/>
+    </radialGradient>
+    <radialGradient id="center" cx="48%" cy="46%" r="40%">
+      <stop offset="0%" stop-color="#b56a3a" stop-opacity="0.85"/><stop offset="100%" stop-color="#b56a3a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="butter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff4cf"/><stop offset="60%" stop-color="#f0d690"/><stop offset="100%" stop-color="#d8b461"/>
+    </linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="soft2" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0"/></filter>
+    <clipPath id="steak"><path d="M132 300 C130 244 196 214 250 222 C312 231 360 252 362 308 C364 366 322 420 246 422 C176 424 134 380 132 326 Z"/></clipPath>
+  </defs>
+
+  <rect width="480" height="600" fill="url(#bg)"/>
+
+  <!-- plate -->
+  <ellipse cx="240" cy="318" rx="196" ry="158" fill="#0c0805"/>
+  <ellipse cx="240" cy="310" rx="186" ry="150" fill="url(#plate)"/>
+  <ellipse cx="186" cy="248" rx="120" ry="64" fill="url(#platespec)" filter="url(#soft)" opacity="0.5"/>
+  <ellipse cx="240" cy="310" rx="186" ry="150" fill="none" stroke="#C9A24B" stroke-width="1.6" stroke-opacity="0.45"/>
+  <ellipse cx="240" cy="310" rx="150" ry="118" fill="none" stroke="#000" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- contact shadow -->
+  <ellipse cx="248" cy="372" rx="150" ry="64" fill="#000" opacity="0.5" filter="url(#soft)"/>
+
+  <!-- steak body -->
+  <path d="M132 300 C130 244 196 214 250 222 C312 231 360 252 362 308 C364 366 322 420 246 422 C176 424 134 380 132 326 Z" fill="url(#crust)"/>
+  <g clip-path="url(#steak)">
+    <ellipse cx="236" cy="300" rx="150" ry="120" fill="url(#center)"/>
+    <!-- fat marbling streaks -->
+    <g stroke="#e3b681" stroke-opacity="0.30" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M165 280 C210 270 250 282 300 276"/><path d="M170 318 C215 308 255 320 308 312"/>
+      <path d="M180 352 C220 344 260 356 300 350"/><path d="M200 250 C235 246 270 252 300 250"/>
+    </g>
+    <!-- grill char bands -->
+    <g stroke="#180a05" stroke-width="20" stroke-opacity="0.62" stroke-linecap="round">
+      <line x1="150" y1="250" x2="320" y2="420"/><line x1="210" y1="226" x2="380" y2="396"/>
+      <line x1="120" y1="300" x2="290" y2="470"/><line x1="270" y1="222" x2="410" y2="362"/>
+    </g>
+    <!-- char highlight edges -->
+    <g stroke="#c98944" stroke-width="2.4" stroke-opacity="0.4" stroke-linecap="round">
+      <line x1="158" y1="244" x2="328" y2="414"/><line x1="218" y1="220" x2="388" y2="390"/>
+    </g>
+    <!-- surface grain -->
+    <rect x="120" y="210" width="260" height="220" filter="url(#grain)" opacity="0.10"/>
+    <!-- seared edge darkening -->
+    <path d="M132 300 C130 244 196 214 250 222 C312 231 360 252 362 308 C364 366 322 420 246 422 C176 424 134 380 132 326 Z" fill="none" stroke="#150a04" stroke-width="22" stroke-opacity="0.5"/>
+    <!-- specular sheen -->
+    <ellipse cx="210" cy="262" rx="70" ry="22" fill="#ffe7b8" opacity="0.30" filter="url(#soft)"/>
+    <g fill="#fff6df"><ellipse cx="196" cy="276" rx="8" ry="4" opacity="0.6" filter="url(#soft2)"/><ellipse cx="284" cy="300" rx="6" ry="3" opacity="0.5" filter="url(#soft2)"/><ellipse cx="250" cy="338" rx="7" ry="3" opacity="0.45" filter="url(#soft2)"/></g>
+  </g>
+
+  <!-- herb butter, melting -->
+  <ellipse cx="244" cy="288" rx="34" ry="20" fill="url(#butter)"/>
+  <ellipse cx="236" cy="281" rx="13" ry="6" fill="#fffae6" opacity="0.85"/>
+  <path d="M218 296 q-8 14 -2 26 M268 294 q10 12 4 26" stroke="#e8c878" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- rosemary -->
+  <g stroke="#8d9a5a" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M286 250 C312 222 332 206 352 184"/>
+  </g>
+  <g stroke="#a7b271" stroke-width="2" stroke-linecap="round">
+    <path d="M292 242 l11 -9 M299 235 l12 -8 M306 227 l11 -9 M313 219 l12 -8 M320 211 l11 -8 M327 203 l11 -8"/>
+  </g>
+
+  <!-- jus pooled + gloss -->
+  <g><ellipse cx="150" cy="356" rx="22" ry="10" fill="#2a0f08"/><ellipse cx="145" cy="353" rx="9" ry="3" fill="#7a3a1e" opacity="0.7"/></g>
+  <g><ellipse cx="332" cy="350" rx="18" ry="8" fill="#2a0f08"/><ellipse cx="328" cy="347" rx="7" ry="2.5" fill="#7a3a1e" opacity="0.7"/></g>
+
+  <!-- flaky salt -->
+  <g fill="#fdf6e6"><rect x="208" y="320" width="3" height="3" opacity="0.85"/><rect x="262" y="296" width="2.6" height="2.6" opacity="0.8"/><rect x="232" y="356" width="3" height="3" opacity="0.8"/><rect x="290" y="330" width="2.4" height="2.4" opacity="0.7"/></g>
+
+  <!-- steam -->
+  <g stroke="#fff" stroke-opacity="0.10" stroke-width="9" fill="none" stroke-linecap="round" filter="url(#soft)">
+    <path d="M210 230 C198 196 224 178 212 146 C204 124 220 108 214 86"/>
+    <path d="M272 236 C284 204 262 184 276 152"/>
+  </g>
+
+  <!-- vignette -->
+  <rect width="480" height="600" fill="url(#bg)" opacity="0" />
+  <radialGradient id="vig" cx="50%" cy="46%" r="62%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.55"/></radialGradient>
+  <rect width="480" height="600" fill="url(#vig)"/>
+</svg>
